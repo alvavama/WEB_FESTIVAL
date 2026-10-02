@@ -18,15 +18,15 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1.5rem;
-  background-color: black;
-  color: white;
+  padding: 1rem;
+  background-color: var(--red-color);
+  color: var (--dark-red);
 }
 
 nav > .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--yellow-color);
+  color: var(--dark-red);
 }
 
 nav > ul {
@@ -39,12 +39,12 @@ nav > ul {
 
 nav > ul > li > a {
   text-decoration: none;
-  color: white;
+  color: var(--dark-red);
   font-size: 1.2rem;
 }
 
 .burger {
-  color: white;
+  color: var(--dark-red);
   display: none;
   cursor: pointer;
 }
