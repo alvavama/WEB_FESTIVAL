@@ -215,6 +215,117 @@ nav > ul > li > a:hover {
   background-color: var(--yellow-color);
   color: var(--dark-yellow);
 }
+
+.modal-window {
+  width: 100%;
+  overflow: hidden;
+}
+
+.modal-track {
+  position: relative;
+  display: flex;
+  width: 300%;
+  animation: modal-slider 15s step-end infinite;
+}
+
+.modal-track > figure {
+  flex: 0 0 33.3333%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-track > figure > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.modal-track > figure > figcaption {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding: 1.5rem 2.5rem 2rem;
+  background-color: var(--yellow-color);
+  color: var(--dark-yellow);
+}
+
+.modal-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.modal-info > h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.modal-info > p {
+  font-size: 1.5rem;
+}
+
+.modal-info > a {
+  text-decoration: none;
+}
+
+.button2 {
+  background-color: var(--dark-yellow);
+  color: var(--yellow-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.button2 > svg {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.button2:hover {
+  background-color: var(--black-color);
+}
+
+.modal-datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--dark-yellow);
+  font-size: 1.1rem;
+}
+
+.modal-datos > .modal-year {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+@keyframes modal-slider {
+  0% {
+    left: 0;
+  }
+
+  33.3333% {
+    left: -100%;
+  }
+
+  66.6666% {
+    left: -200%;
+  }
+
+  100% {
+    left: -200%;
+  }
+}
 @media (max-width: 768px) {
   nav > ul {
     display: none;
@@ -238,5 +349,21 @@ nav > ul > li > a:hover {
 
   .exposicion > div > h2 {
     font-size: 2rem;
+  }
+
+  .modal-track > figure > figcaption {
+    flex-direction: column;
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .modal-info > h2 {
+    font-size: 2rem;
+  }
+
+  .modal-datos {
+    padding-left: 0;
+    padding-top: 1rem;
+    border-left: none;
+    border-top: 1px solid var(--dark-yellow);
   }
 }
