@@ -24,17 +24,13 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  /* Sin "transform" por defecto: solo se aplica al ocultarlo (.nav--hidden).
-     Un transform haría que el menú (position: fixed) se colocara respecto al nav. */
   transition: transform 0.35s ease;
 }
 
-/* Clase que añade JS al hacer scroll */
 nav.is-scrolled {
   border-bottom: 1px solid var(--dark-red);
 }
 
-/* Clase que añade JS con el menú móvil abierto: evita el scroll de fondo */
 body.menu-open {
   overflow: hidden;
 }
@@ -65,7 +61,6 @@ nav > ul > li > a:hover {
   font-weight: bold;
 }
 
-/* Botón hamburguesa (oculto en escritorio) */
 .burger {
   color: var(--dark-red);
   background-color: transparent;
@@ -78,7 +73,6 @@ nav > ul > li > a:hover {
   display: block;
 }
 
-/* Se muestra el icono "menu" con el menú cerrado y la "x" con el menú abierto */
 .burger > svg:nth-child(2) {
   display: none;
 }
@@ -101,16 +95,16 @@ nav > ul > li > a:hover {
   border: 1px solid var(--dark-yellow);
   border-radius: 10px;
   color: var(--dark-yellow);
-  width: 240px;
+  width: 420px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  gap: 2rem;
-  padding: 1rem;
+  gap: 3rem;
+  padding: 1.5rem;
   position: absolute;
   left: 1rem;
-  bottom: 5rem;
+  bottom: 2rem;
   z-index: 1;
 }
 .header-text > div {
@@ -120,8 +114,22 @@ nav > ul > li > a:hover {
 }
 
 .header-text > h1 {
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: lighter;
+}
+
+.header-text > div > p {
+  font-size: 1.5rem;
+}
+
+.header-text .button1 {
+  font-size: 1.5rem;
+  padding: 0.75rem;
+}
+
+.header-text .button1 > svg {
+  width: 1em;
+  height: 1em;
 }
 .button1 {
   background-color: var(--dark-yellow);
@@ -363,6 +371,252 @@ nav > ul > li > a:hover {
   }
 }
 
+.entradas-info {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  padding: 3.5rem;
+  background-color: var(--yellow-color);
+  color: var(--dark-yellow);
+}
+
+.entradas-texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-right: 2.5rem;
+  border-right: 1px solid var(--dark-yellow);
+}
+
+.entradas-texto h1 {
+  font-size: 5.5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.entradas-texto p {
+  font-size: 2.5rem;
+}
+
+.entradas-datos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.entradas-texto > .entradas-datos > p {
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+
+.entradas-texto > .entradas-datos > .entradas-year {
+  font-size: 6.5rem;
+  line-height: 0.8;
+}
+
+.entradas-info > figure {
+  flex: 1;
+}
+
+.entradas-info > figure > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border: 2px solid var(--dark-yellow);
+}
+
+.formulario-compra {
+  background-color: var(--black-color);
+  padding: 5.5rem 3.5rem 2.5rem;
+}
+
+.formulario-compra > form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.formulario-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 5rem 2.5rem 4rem;
+  border: 2px solid var(--yellow-color);
+  border-radius: 20px;
+  color: var(--yellow-color);
+}
+
+.formulario-box > h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.formulario-columnas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2.5rem 5rem;
+}
+
+.formulario-columna {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  min-height: 3.5rem;
+  font-size: 2.5rem;
+}
+
+.campo > label,
+.campo > p:first-child {
+  flex: 0 0 auto;
+  min-width: 11rem;
+  color: var(--dark-yellow);
+  font-weight: lighter;
+}
+
+.campo > input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.25rem 0;
+  font-size: 2rem;
+  color: var(--yellow-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--dark-yellow);
+  outline: none;
+}
+
+.campo > input:focus {
+  border-bottom-color: var(--yellow-color);
+}
+
+.campo-valor {
+  text-align: right;
+}
+
+.select-box {
+  position: relative;
+  flex: 0 1 22rem;
+}
+
+.select-box > select {
+  appearance: none;
+  width: 100%;
+  padding: 1rem 3.5rem 1rem 1.25rem;
+  font-size: 1.25rem;
+  color: var(--yellow-color);
+  background-color: var(--black-color);
+  border: 1px solid var(--yellow-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.select-box > svg {
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  transform: translateY(-50%);
+  color: var(--yellow-color);
+  pointer-events: none;
+}
+
+.button3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  font-size: 4rem;
+  background-color: var(--yellow-color);
+  color: var(--dark-yellow);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button3 > svg {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.button3:hover {
+  background-color: var(--dark-yellow);
+  color: var(--yellow-color);
+}
+
+#error {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--red-color);
+}
+
+#modal-compra {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#modal-compra > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 560px;
+  padding: 2rem;
+  background-color: var(--yellow-color);
+  color: var(--dark-yellow);
+  border: 1px solid var(--dark-yellow);
+  border-radius: 10px;
+}
+
+#modal-compra h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+#modal-compra ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: none;
+  font-size: 1.25rem;
+}
+
+#modal-compra span {
+  font-weight: bold;
+}
+
+#modal-compra .button1 {
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -413,23 +667,59 @@ footer ul > li > a:hover {
   footer > .footer-info {
     width: 100vw;
   }
+
+  .header-text {
+    width: 340px;
+    gap: 2.5rem;
+    padding: 1.25rem;
+  }
+
+  .header-text > h1 {
+    font-size: 2.75rem;
+  }
+
+  .header-text > div > p {
+    font-size: 1.25rem;
+  }
+
+  .header-text .button1 {
+    font-size: 1.25rem;
+    padding: 0.6rem;
+  }
+}
+@media (max-width: 953px) {
+  .entradas-info {
+    flex-direction: column;
+  }
+  .entradas-texto {
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--dark-yellow);
+  }
+
+  .entradas-texto h1 {
+    font-size: 3.5rem;
+  }
+
+  .entradas-texto p {
+    font-size: 2rem;
+  }
+
+  .entradas-texto > .entradas-datos > .entradas-year {
+    font-size: 4.5rem;
+  }
 }
 
-/* Móvil: aparece el menú hamburguesa */
 @media (max-width: 768px) {
   .burger {
     display: block;
   }
 
-  /* Nav que se esconde al bajar (clase que pone el JS) */
   nav.nav--hidden {
     transform: translateY(-100%);
   }
 
-  /* Capas en móvil (de abajo a arriba):
-     1. el menú a pantalla completa
-     2. una "barra" opaca (::before) para que el menú salga por debajo del nav
-     3. el logo y el botón */
   nav::before {
     content: "";
     position: absolute;
@@ -447,7 +737,6 @@ footer ul > li > a:hover {
     z-index: 3;
   }
 
-  /* Menú a pantalla completa: por defecto está fuera, por encima de la pantalla */
   nav > ul {
     position: fixed;
     top: 0;
@@ -455,7 +744,7 @@ footer ul > li > a:hover {
     z-index: 1;
     width: 100%;
     height: 100vh;
-    height: 100dvh; /* alto real en móviles con barra del navegador */
+    height: 100dvh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -464,14 +753,12 @@ footer ul > li > a:hover {
     background-color: var(--yellow-color);
     border-bottom: 1px solid var(--dark-yellow);
     transform: translateY(-100%);
-    visibility: hidden; /* cerrado: los enlaces no reciben foco */
-    /* Al cerrar: primero se desliza y, al terminar (0.45s), se oculta */
+    visibility: hidden;
     transition:
       transform 0.45s cubic-bezier(0.7, 0, 0.3, 1),
       visibility 0s linear 0.45s;
   }
 
-  /* Abierto: baja hasta su sitio. La visibilidad cambia sin retardo */
   nav > ul.is-open {
     transform: translateY(0);
     visibility: visible;
@@ -480,7 +767,6 @@ footer ul > li > a:hover {
       visibility 0s linear 0s;
   }
 
-  /* Los enlaces aparecen uno detrás de otro */
   nav > ul > li {
     opacity: 0;
     transform: translateY(-16px);
@@ -505,6 +791,67 @@ footer ul > li > a:hover {
     color: var(--dark-yellow);
     font-size: 3rem;
   }
+
+  .entradas-info {
+    flex-direction: column;
+  }
+
+  .entradas-texto {
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--dark-yellow);
+  }
+
+  .entradas-texto h1 {
+    font-size: 3.5rem;
+  }
+
+  .entradas-texto p {
+    font-size: 2rem;
+  }
+
+  .entradas-texto > .entradas-datos > .entradas-year {
+    font-size: 4.5rem;
+  }
+
+  .formulario-compra {
+    padding: 3.5rem 2.5rem 2.5rem;
+  }
+
+  .formulario-box {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .formulario-box > h2 {
+    font-size: 2rem;
+  }
+
+  .formulario-columna {
+    flex-basis: 100%;
+  }
+
+  .campo {
+    font-size: 1.75rem;
+  }
+
+  .campo > label,
+  .campo > p:first-child {
+    min-width: 8rem;
+  }
+
+  .campo > input {
+    font-size: 1.5rem;
+  }
+
+  .button3 {
+    font-size: 3rem;
+  }
+
+  .button3 > svg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 
 @media (max-width: 791px) {
@@ -514,6 +861,32 @@ footer ul > li > a:hover {
 }
 
 @media (max-width: 600px) {
+  .header-text {
+    width: 170px;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.5rem;
+  }
+
+  .header-text > div {
+    gap: 0.5rem;
+  }
+
+  .header-text > h1 {
+    font-size: 1.25rem;
+  }
+
+  .header-text > div > p {
+    font-size: 0.875rem;
+  }
+
+  .header-text .button1 {
+    font-size: 0.875rem;
+    padding: 0.25rem;
+  }
+
   .exposiciones-container {
     padding: 2.5rem 1rem 3rem;
   }
@@ -536,6 +909,25 @@ footer ul > li > a:hover {
     padding-top: 1rem;
     border-left: none;
     border-top: 1px solid var(--dark-yellow);
+  }
+
+  .entradas-info,
+  .formulario-compra {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .entradas-texto h1 {
+    font-size: 2.75rem;
+  }
+
+  .campo {
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+  }
+
+  .select-box {
+    flex-basis: 100%;
   }
 
   footer {
