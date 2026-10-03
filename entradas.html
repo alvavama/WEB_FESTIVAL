@@ -5,19 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entradas</title>
     <link rel="stylesheet" href="CSS/style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://use.typekit.net/lvg5rjn.css" />
   </head>
   <body>
     <nav>
       <div class="logo"><a href="index.html">PHotoESPAÑA</a></div>
-      <ul class="nav-links">
+      <ul class="nav-links" id="menu">
         <li><a href="entradas.html">Agenda</a></li>
         <li><a href="entradas.html">Entradas</a></li>
       </ul>
-      <div class="burger">
+      <button
+        class="burger"
+        type="button"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Abrir menú"
+      >
         <i data-feather="menu"></i>
-      </div>
+        <i data-feather="x"></i>
+      </button>
     </nav>
+    <footer>
+      <div class="footer-info">
+        <p class="footer-logo">PHoto<strong>ESPAÑA</strong></p>
+        <ul>
+          <li>
+            <a href="https://maps.google.com/?q=C/+Verónica+13+28014+Madrid"
+              >C/ Verónica 13 — 28014 Madrid</a
+            >
+          </li>
+          <li><a href="mailto:info@phe.es">info@phe.es</a></li>
+          <li><a href="tel:913601320">913601320</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/photoespana_/?hl=en"
+              >Instagram</a
+            >
+          </li>
+          <li><a href="https://twitter.com/PhotoESPAÑA">X (twitter)</a></li>
+          <li>
+            <a href="https://www.linkedin.com/company/photoespana/">Linkedin</a>
+          </li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Aviso formulario</a></li>
+          <li><a href="#">Política de cookies</a></li>
+        </ul>
+      </div>
+    </footer>
     <!-- Enlazado iconos -->
     <script>
       feather.replace();
