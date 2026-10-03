@@ -65,7 +65,7 @@ nav > ul > li > a:hover {
   border: 1px solid var(--dark-yellow);
   border-radius: 10px;
   color: var(--dark-yellow);
-  width: 200px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,6 +81,11 @@ nav > ul > li > a:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.header-text > h1 {
+  font-size: 2rem;
+  font-weight: lighter;
 }
 .button1 {
   background-color: var(--dark-yellow);
@@ -143,6 +148,73 @@ nav > ul > li > a:hover {
   }
 }
 
+#photoespana-hoy {
+  background-color: var(--black-color);
+}
+.exposiciones-container {
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem 2.5rem 4rem;
+  gap: 2rem;
+  color: var(--yellow-color);
+}
+
+.exposiciones-container > p {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.exposiciones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.exposicion {
+  flex: 1 1 340px;
+  max-width: calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border: 1px solid var(--yellow-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.exposicion > figure {
+  margin-bottom: 2rem;
+}
+
+.exposicion > figure > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.exposicion > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.exposicion > div > h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.exposicion > div > p {
+  font-size: 1.25rem;
+  color: var(--dark-yellow);
+}
+
+.exposicion:hover {
+  background-color: var(--yellow-color);
+  color: var(--dark-yellow);
+}
 @media (max-width: 768px) {
   nav > ul {
     display: none;
@@ -150,5 +222,21 @@ nav > ul > li > a:hover {
 
   .burger {
     display: block;
+  }
+}
+
+@media (max-width: 791px) {
+  .exposicion {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .exposiciones-container {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .exposicion > div > h2 {
+    font-size: 2rem;
   }
 }
